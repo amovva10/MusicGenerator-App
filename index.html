@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Kanit&display=swap" rel="stylesheet">
+
+    <!-- Page title -->
+    <title>Music Generator</title>
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Google API script -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    
+    <!-- Custom JavaScript script -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Main heading -->
+    <h1>Music Generator</h1>
+
+    <!-- Form for user input -->
+    <form action="process.php" method="post">
+
+        <!-- Container for questions -->
+        <div id="questionsWrapper">
+            
+            <!-- Question 1: User's name -->
+            <div class="question" id="question1">
+                <label for="nameInput">Enter your name</label>
+                <input type="text" id="nameInput" required>
+                <button id="nextbtn1" type="button">Next</button>
+            </div>
+
+            <!-- Question 2: User's mood -->
+            <div class="question" id="question2" style="display: none;">
+                <p id="greeting"></p>
+                <div>
+                    <button class="btn" id="happyBtn" type="button">Happy</button>
+                    <button class="btn" id="sadBtn" type="button">Sad</button>
+                    <button class="btn" id="energeticBtn" type="button">Energetic</button>
+                    <button class="btn" id="calmBtn" type="button">Calm</button>
+                    <button class="btn" id="angryBtn" type="button">Angry</button>
+                </div>
+                <button id="nextbtn2" type="button">Next</button>
+            </div>
+
+            <!-- Question 3: User's preferred language -->
+            <div class="question" id="question3" style="display: none;">
+                <label for="language">What language do you prefer for your music?</label>
+                <div>
+                    <button class="btn" id="englishBtn" type="button">English</button>
+                    <button class="btn" id="spanishBtn" type="button">Spanish</button>
+                    <button class="btn" id="koreanBtn" type="button">Korean</button>
+                    <button class="btn" id="hindiBtn" type="button">Hindi</button>
+                    <button class="btn" id="teluguBtn" type="button">Telugu</button>
+                </div>
+                <button id="generatebtn" type="button">Generate</button>
+            </div>
+        </div>
+
+        <!-- Container for displaying the result -->
+        <div id="resultContainer" style="display: none;">
+            <div id="youtubePreviewContainer">
+                <div id="youtubePreview"></div>
+            </div>
+            <div id="buttonsContainer" style="display: none;">
+                <button id="generateAgainBtn">Generate Again</button>
+            </div>
+            
+            <!-- Hidden inputs to store mood and language data -->
+            <input type="hidden" name="mood" id="moodInput" value="">
+            <input type="hidden" name="language" id="languageInput" value="">
+        </div>
+    </form>
+</body>
+
+</html>
