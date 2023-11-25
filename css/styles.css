@@ -1,0 +1,177 @@
+/* styles for body of page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('background.gif'); /* Credit to Elieli9864 - Source: [https://youtu.be/XdkyzSq7S_w?si=kHwQRdyDBriIQyl_ */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Kalam', cursive;
+    font-family: 'Kanit', sans-serif;
+    position: relative;
+}
+
+/* Styles for the main form container */
+form {
+    width: 30%;
+    background-color: #ceafd3;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    padding: 20px 15px; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px; 
+    margin-top: 20px;
+}
+
+/* Styles for the main page header */
+h1 {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    transform: translateY(-50%);
+    width: 100%;
+    font-size: 40px; 
+    color: #9be5b2; 
+}
+
+/* Styles for page spacing */
+form label,
+form input,
+form button {
+    margin-top: 10px; 
+}
+
+/* Styles for displaying questions */
+.question {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styles for question labels */
+.question label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Styles for question inputs */
+.question input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Styles for buttons */
+.btn {
+    background-color: #ffffff;
+    border: 2px solid #e19ee0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40%; 
+    margin: 5px auto; 
+}
+
+
+.btn:hover {
+    background-color: #eca5f7;
+}
+
+.selected {
+    background-color: #ffd6ea;
+}
+
+/* Styles for question containers */
+.question div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.btn {
+    font-size: 12px;
+    padding: 8px 16px;
+}
+
+/* Styles for displaying questions */
+.question label,
+#greeting {
+    font-size: 18px;
+}
+
+/* Styles for buttons */
+#nextbtn1,
+#nextbtn2,
+#generatebtn {
+    background-color: #f1c7f1;
+    color: #000000;
+    border: 1px solid #cfc0dc;
+    padding: 5px 19px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 30px 0 0px 0;
+    transition: background-color 0.3s ease;
+}
+
+#nextbtn1:hover,
+#nextbtn2:hover,
+#generatebtn:hover {
+    background-color: #ccc;
+    color: #444;
+}
+
+/* Styles for youtube preview container */
+#youtubePreviewContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#youtubePreview {
+    margin: 0 auto;
+}
+
+#youtubePreview iframe {
+    width: 560px;
+    height: 315px;
+    background-color: #e8cdff;
+    padding: 5px;
+    border: 8px solid #8d8eee;
+    margin: 20px;
+}
+
+/* Styles for button container */
+#buttonsContainer {
+    display: none;
+    position: fixed;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#buttonsContainer button {
+    margin: 10px;
+    background-color: #f1c7f1;
+    color: #000000;
+    border: 2px solid #cfc0dc;
+    padding: 15px 20px; 
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#buttonsContainer button:hover {
+    background-color: #ccc;
+    color: #444;
+}
